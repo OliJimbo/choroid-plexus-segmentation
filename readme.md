@@ -39,5 +39,6 @@ The argument `max_iter` controls the number of iterations in the `BayesianGaussi
 The default is 100, but this may not find a solution in some cases.
 The resulting choroid plexus segmentation can be found under `<freesurfer_subjects_dir><subject_id>mri/choroid_susan_segmentation.nii.gz`
 
+The script also returns a log file of redirected console output to <outdir>/<subjectid>_log.txt.
 <h3>Contact</h3>
 For further questions, please email me at <a href="mailto:ehsan.tadayon84@gmail.com">ehsan.tadayon84@gmail.com</a>. 
