@@ -75,6 +75,14 @@ cmd = 'mri_binarize --i {subjects_dir}/{subj}/mri/aseg.mgz --match 31 63  --o {o
 cmd = cmd.format(subjects_dir=subjects_dir, out_dir=out_dir, subj=subj)
 run_cmd(cmd)
 
+cmd = 'mri_binarize --i {subjects_dir}/{subj}/mri/aseg.mgz --match 4 5 31  --o {out_dir}/{subj}_lh_choroid+ventricle_mask.nii.gz'
+cmd = cmd.format(subjects_dir=subjects_dir, subj=subj, out_dir=out_dir)
+run_cmd(cmd)
+
+cmd = 'mri_binarize --i {subjects_dir}/{subj}/mri/aseg.mgz --match 43 44 63  --o {out_dir}/{subj}_rh_choroid+ventricle_mask.nii.gz'
+cmd = cmd.format(subjects_dir=subjects_dir, subj=subj, out_dir=out_dir)
+run_cmd(cmd)
+
 
 ### left hemisphere (lh)
 # get the intensity values for the mask:
