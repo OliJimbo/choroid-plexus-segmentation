@@ -25,20 +25,19 @@ Our paper describing this lightweight algorithm with potential implications for 
 
 * FSL
 * Freesurfer
-* Python: nibabel, sklearn, numpy 
+* Python: nibabel, sklearn, numpy, logging
 
 <h3> How to run the code</h3>
 The current version of the script requires Freesurfer processed files (recon-all) for ventricular segmentation. In future, we aim to add the possibility to use other ventricular segmetnation algorithms to speed up the process. After running recon-all, you can get the choroid plexus segmentation as follows: 
 
 In the terminal:
 ```bash
-python run_gmm_chp_segmentation.py <freesurfer_subjects_dir> <subject_id>
+python run_gmm_chp_segmentation.py <freesurfer_subjects_dir> <subject_id> <max_iter>
 ```
+The argument `max_iter` controls the number of iterations in the
+`BayesianGaussianMixture`.
+The default is 100, but this may not find a solution in some cases.
 The resulting choroid plexus segmentation can be found under `<freesurfer_subjects_dir><subject_id>mri/choroid_susan_segmentation.nii.gz`
 
 <h3>Contact</h3>
 For further questions, please email me at <a href="mailto:ehsan.tadayon84@gmail.com">ehsan.tadayon84@gmail.com</a>. 
-
-
-
-
