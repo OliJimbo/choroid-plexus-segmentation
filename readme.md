@@ -32,10 +32,10 @@ The current version of the script requires Freesurfer processed files (recon-all
 
 In the terminal:
 ```bash
-python run_gmm_chp_segmentation.py <freesurfer_subjects_dir> <subject_id> <max_iter>
+python run_gmm_chp_segmentation.py <freesurfer_subjects_dir> <subject_id> <outdir> <max_iter>
 ```
-The argument `max_iter` controls the number of iterations in the
-`BayesianGaussianMixture`.
+The argument `outdir` specifies the folder in which the output files will be saved.
+The argument `max_iter` controls the number of iterations in the `BayesianGaussianMixture`.
 The default is 100, but this may not find a solution in some cases.
 The resulting choroid plexus segmentation can be found under `<freesurfer_subjects_dir><subject_id>mri/choroid_susan_segmentation.nii.gz`
 
